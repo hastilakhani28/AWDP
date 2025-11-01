@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hasti Lakhani | Portfolio</title>
+    <style>
+        /* Basic CSS for a clean, professional look */
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+            line-height: 1.6;
+            scroll-behavior: smooth;
+        }
+        .container {
+            max-width: 960px;
+            margin: auto;
+            overflow: hidden;
+            padding: 0 20px;
+        }
+        header {
+            background: #333;
+            color: #fff;
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+        header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 1.5rem;
+        }
+        header nav ul {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+        }
+        header nav ul li {
+            display: inline;
+            margin-left: 20px;
+        }
+        header a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        section {
+            padding: 80px 0;
+            border-bottom: 1px solid #ddd;
+        }
+        #home {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 120px 0;
+            margin-top: 60px; /* Offset for fixed header */
+        }
+        #home h2 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+        }
+        #home p {
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: auto;
+        }
+        h2.section-title {
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 2rem;
+        }
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+        .project-card {
+            background: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .project-card h3 {
+            margin-top: 0;
+        }
+        form {
+            max-width: 600px;
+            margin: auto;
+        }
+        form input, form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            box-sizing: border-box; /* Important for padding and width */
+        }
+        form button {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            background: #333;
+            color: #fff;
+            font-size: 1rem;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #333;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <h1>Hasti Lakhani</h1>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="home">
+            <div class="container">
+                <h2>Engineering Justice with Artificial Intelligence</h2>
+                <p>A 3rd-year Computer Science student and an aspiring engineer, driven by empathy to make legal help universally accessible through technology.</p>
+            </div>
+        </section>
+
+        <section id="about">
+            <div class="container">
+                <h2 class="section-title">About Me</h2>
+                <p>
+                    I am Hasti Lakhani, a passionate Computer Science and Engineering student at Silver Oak University. My journey in technology is fueled by a fascination with Artificial Intelligence and Data Science, and guided by a core belief: that the most powerful innovations are those that serve humanity.
+                </p>
+                <p>
+                    I see a world where complex legal systems can be made simple and understandable for everyone. As an empath, I am committed to using my skills in machine learning, data analysis, and software development to build tools that bridge the gap between legal services and the people who need them most. My goal is to not just write code, but to write code that empowers.
+                </p>
+            </div>
+        </section>
+
+        <section id="projects">
+            <div class="container">
+                <h2 class="section-title">My Projects</h2>
+                <div class="project-grid">
+                    <div class="project-card">
+                        <h3>LegalDoc AI Summarizer</h3>
+                        <p>An AI-powered tool using NLP to summarize complex legal documents into plain, understandable English. Technologies: Python, TensorFlow, NLTK.</p>
+                    </div>
+                    <div class="project-card">
+                        <h3>Nyay Connect - Pro Bono Directory</h3>
+                        <p>A dynamic, database-driven web platform that connects citizens with lawyers offering pro bono legal services. Technologies: PHP, MySQL, JavaScript, Bootstrap.</p>
+                    </div>
+                    <div class="project-card">
+                        <h3>Dispute Outcome Predictor</h3>
+                        <p>A proof-of-concept machine learning model trained on historical case data to forecast potential outcomes of civil disputes. Technologies: Python, Pandas, Scikit-learn.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact">
+            <div class="container">
+                <h2 class="section-title">Contact Me</h2>
+                <p style="text-align: center;">Have a project idea or want to connect? Send me a message!</p>
+                
+                <!-- 
+                    IMPORTANT FORM SETUP:
+                    action="submit_form.php" tells the form where to send the data.
+                    method="POST" sends the form data in the background, which is standard for contact forms.
+                -->
+                <form action="submit_form.php" method="POST">
+                    <!-- 
+                        The 'name' attributes below are critical. 
+                        'name="name"' corresponds to $_POST['name'] in PHP.
+                        'name="email"' corresponds to $_POST['email'] in PHP.
+                        'name="message"' corresponds to $_POST['message'] in PHP.
+                    -->
+                    <input type="text" name="name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="Your Email" required>
+                    <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+                    <button type="submit">Send Message</button>
+                </form>
+
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Hasti Lakhani</p>
+        </div>
+    </footer>
+
+</body>
+</html>
